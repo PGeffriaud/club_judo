@@ -11,12 +11,25 @@
 </head>
 <body>
 <div class="container">
-	<div class="header row col-md-12"><%@ include file="jspf/header.jspf" %></div>
+	<div class="row col-md-12"><%@ include file="jspf/header.jspf" %></div>
+	<c:if test="${not empty sessionScope.login}">
+		<div class="row">
+		
+			<div class="col-md-11">
+				<p class="text-left lead">Utilisateur: <c:out value="${sessionScope.login}"/></p>
+			</div>
+			<div class="col-md-1">
+				<form action="${pageContext.request.contextPath}/logout" method="POST">
+					<input type="submit" value="Logout" class="btn btn-danger">
+				</form>
+			</div>
+		</div>
+	</c:if>
 	<div class="row">
-		<div class="menu col-md-3">
+		<div class="col-md-3">
 			<%@ include file="jspf/menu.jspf" %>
 		</div>
-		<div class="page col-md-9">
+		<div class="col-md-9">
 			<c:if test="${not empty requestScope.page}">
 				<td class="page"><jsp:include page="jspf/${requestScope.page}.jspf" /></td>
 			</c:if>
@@ -25,7 +38,7 @@
 			</c:if>
 		</div>
 	</div>
-	<div class="footer row col-md-12"><%@ include file="jspf/footer.jspf" %></div>
+	<div class="row col-md-12"><%@ include file="jspf/footer.jspf" %></div>
 </div>
 
 </body>
