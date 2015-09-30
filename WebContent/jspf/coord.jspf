@@ -1,0 +1,7 @@
+<div id="body" class="panel panel-default">
+<div class="panel-heading">Coordonnees</div>
+<div class="panel-body">
+	<p>Tel: 02.51.01.02.03</p>
+	<p>Mail: <a href="mailto:blabla@myspace.com">blabla@myspace.com</a></p>
+</div>
+</div>

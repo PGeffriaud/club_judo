@@ -1,0 +1,6 @@
+<div id="header" class="panel">
+<div class="panel-body">
+	<img id="imgHeader" alt="clubjudo" src="${pageContext.request.contextPath}/img/judo3.gif" width="140px" height="170"/>
+	<h3><span>Bienvenue sur le site du club de judo</span></h3>
+</div>
+</div>
